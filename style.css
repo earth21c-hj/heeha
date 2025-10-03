@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'kangwon';   /* 내가 정할 글꼴 이름 */
+  src: url('fonts/kangwon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: url('images/background.JPG') no-repeat center center fixed;
+  background-size: cover;  /* 화면 크기에 맞게 꽉 채우기 */
+  margin: 0;
+  font-family: 'kangwon', sans-serif;
+}
+
+.hidden { display: none; }
+
+.site-header {
+  font-family: 'kangwon', sans-serif;
+  background: #4a90e2;
+  color: #fff;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.site-header h1 { margin: 0; font-size: 1.25rem; }
+.nav-link { color: #fff; text-decoration: none; margin-left: 12px; font-weight: 600; }
+
+.container { max-width: 960px; margin: 24px auto; padding: 0 16px; }
+
+.hero, .card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.hero { text-align: center; }
+.hero h2 { margin-top: 0; }
+
+.btn {
+  background: linear-gradient(90deg, #4a90e2, #357ab7);
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+
+.quiz-header { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+#questionText { margin-top: 8px; }
+
+.choices { list-style: none; padding: 0; margin: 16px 0; }
+.choice-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid #e5e8ef;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.choice-item:hover { background: #f3f7ff; }
+.choice-item input { transform: scale(1.15); }
+
+.quiz-actions { display: flex; justify-content: flex-end; }
+.site-footer { text-align: center; padding: 24px; color: #666; }
