@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LearnRun - 학습퀴즈</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>LearnRun</h1>
+    <nav>
+      <a href="#" class="nav-link">홈</a>
+      <a href="#" class="nav-link">게임 시작</a>
+      <a href="#" class="nav-link">랭킹(예정)</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- 홈 화면 -->
+    <section id="home" class="hero">
+      <h2>재미있게 배우자!</h2>
+      <p>퀴즈를 통해 지식을 쌓아보세요. 아래 버튼을 눌러 시작합니다.</p>
+      <button id="startBtn" class="btn">게임 시작</button>
+    </section>
+
+    <!-- 퀴즈 화면 -->
+    <section id="quiz" class="card hidden" aria-live="polite">
+      <div class="quiz-header">
+        <div id="progress" aria-live="polite">문제 1 / 5</div>
+        <div id="score" aria-live="polite">점수 0</div>
+      </div>
+
+      <h3 id="questionText">여기에 질문이 표시됩니다.</h3>
+
+      <ul id="choices" class="choices" role="listbox" aria-label="보기 선택">
+        <!-- 보기 항목이 JS로 채워집니다 -->
+      </ul>
+
+      <div class="quiz-actions">
+        <button id="nextBtn" class="btn" disabled>다음</button>
+      </div>
+    </section>
+
+    <!-- 결과 화면 -->
+    <section id="result" class="card hidden">
+      <h3>결과</h3>
+      <p id="resultText">점수가 여기에 표시됩니다.</p>
+      <button id="retryBtn" class="btn">다시하기</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 LearnRun</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
